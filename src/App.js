@@ -35,12 +35,18 @@ class App extends Component {
     let {questions ,rendQuestion} = this.state
     if(question.correctAnswer === choice)
         {
+
           rendQuestion.background = "green" 
           this.setState({rendQuestion})
-        }
+      }
     else
       question.background = "red"
-
+    
+    // for(let i=0 ; i<questions.length ; i++)
+    //   {
+    //     if(questions[i] === question)
+    //      questions[i].background = question.background 
+    //   }
       if(rendQuestion.background === "green")
         this.randQuestion()
      
